@@ -34,7 +34,6 @@
 
         data = response.data;     
         data = data.sort(compare);
-        console.log("Data", data)
 
         for(var i = 0; i < data.length ; i++)
             vals.push(data[i].nombre)
@@ -74,7 +73,7 @@
         a.setAttribute("class", "autocomplete-items");
         /*append the DIV element as a child of the autocomplete container:*/
         this.parentNode.appendChild(a);
-        
+        var temp = -1;
         //Input value must contain at least 3 chars to show results
         if(val.length > 2)
         {
@@ -82,8 +81,41 @@
             for (i = 0; i < arr.length; i++) {
                 /*check if the item starts with the same letters as the text field value:*/
                 if (arr[i].keyword.toUpperCase().includes(val.toUpperCase())) {
+                    //Validations for Categories Divs
+                    if(i != 0)
+                    {
+                        if(temp != -1)
+                        {
+                            if(arr[i].categoria != arr[temp].categoria)
+                            {
+                                /*create a DIV element for each categorie:*/
+                                cat = document.createElement("DIV");
+                                cat.innerHTML = arr[i].categoria;
+                                a.appendChild(cat);
+                                temp = i;
+                            }  
+                        }
+                        else
+                        {
+                            if(arr[i].categoria != arr[i-1].categoria)
+                            {
+                                /*create a DIV element for each categorie:*/
+                                cat = document.createElement("DIV");
+                                cat.innerHTML = arr[i].categoria;
+                                a.appendChild(cat);
+                                temp = i;
+                            } 
+                        }
+                    }
+                    else
+                    {
+                        /*create a DIV element for each categorie:*/
+                        cat = document.createElement("DIV");
+                        cat.innerHTML = arr[i].categoria;
+                        a.appendChild(cat);
+                        temp = i;
+                    }
                 /*create a DIV element for each matching element:*/
-                console.log(arr)
                 b = document.createElement("DIV");
                 b.classList.add(arr[i].categoria);
                 /*make the matching letters bold:*/
@@ -97,7 +129,6 @@
                     // inp.value = this.getElementsByTagName("input")[0].value;
 
                     var selectedOpt = this.getElementsByTagName("input")[0].value;
-                    console.log(selectedOpt)
                     for(var i = 0; i < data.length ; i++)
                     {
                         if(data[i].nombre == selectedOpt)
