@@ -1,10 +1,10 @@
 {
     "data": [
         { "keyword":"formato animado archivo",  "categoria":"Animado",   "tipo": "a",   "nombre":"Formato de tipo archivo 1",       "slide":"?type=animated#slide=1" },
+        { "keyword":"formato enlace",           "categoria":"Enlace",    "tipo": "ed",  "nombre":"Formato de enlace de archivo 1",  "slide":"?type=enlace#slide=1" },
         { "keyword":"formato animado archivo",  "categoria":"Animado",   "tipo": "a",   "nombre":"Formato de tipo archivo 2",       "slide":"?type=animated#slide=2" },
-        { "keyword":"formato animado",  "categoria":"Animado",   "tipo": "a",   "nombre":"Formato de tipo archivo 3",       "slide":"?type=animated#slide=3" },
-        { "keyword":"formato enlace",  "categoria":"Enlace",    "tipo": "ed",  "nombre":"Formato de enlace de archivo 1",  "slide":"?type=enlace#slide=1" },
-        { "keyword":"formato enlace archivo",  "categoria":"Enlace",    "tipo": "ed",  "nombre":"Formato de enlace de archivo 2",  "slide":"?type=enlace#slide=2" },
-        { "keyword":"archivo",  "categoria":"Enlace",    "tipo": "ed",  "nombre":"Formato de enlace de archivo 3",  "slide":"?type=enlace#slide=3" }
+        { "keyword":"formato enlace archivo",   "categoria":"Enlace",    "tipo": "ed",  "nombre":"Formato de enlace de archivo 2",  "slide":"?type=enlace#slide=2" },
+        { "keyword":"formato animado",          "categoria":"Animado",   "tipo": "a",   "nombre":"Formato de tipo archivo 3",       "slide":"?type=animated#slide=3" },
+        { "keyword":"archivo",                  "categoria":"Enlace",    "tipo": "ed",  "nombre":"Formato de enlace de archivo 3",  "slide":"?type=enlace#slide=3" }
     ]
 }
